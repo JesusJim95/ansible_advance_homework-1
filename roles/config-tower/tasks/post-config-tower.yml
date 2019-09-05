@@ -1,7 +1,7 @@
 - name: Create Homework Assignment project
   tower_project:
     name: "{{ proj_name }}"
-    desciption: "Awesome {{ proj_name }}"
+    description: "Awesome {{ proj_name }}"
     organization: "{{ org_name }}"
     scm_url: "{{ scm_url }}"
     scm_branch: "{{ scm_branch }}"
