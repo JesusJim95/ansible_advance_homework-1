@@ -6,6 +6,8 @@
   service:
     name: haproxy
     state: started
+    enabled: yes
+    
 - name: configure haproxy
   template:
     src: haproxy.cfg.j2
