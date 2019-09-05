@@ -1,12 +1,13 @@
 - hosts: tag_AnsibleGroup_frontends
   gather_facts: false
   tasks:
-  - name: ec2_facts
-    register: info
+  # - name: get info
+  #   ec2_facts:
+  #   register: info
 
   - name: Curl website
     uri:
-      url: "http://{{ info.ansible_ec2_public_ipv4 }}"
+      url: "http://{{ ansible_host }}"
       return_content: yes
     register: webpage
 
