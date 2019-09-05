@@ -5,6 +5,7 @@
     organization: "{{ org_name }}"
     scm_url: "{{ scm_url }}"
     scm_branch: "{{ scm_branch }}"
+    scm_type: git
 
 - name: Machine Credentail to connect to workstation using openstack.pub
   tower_credential:
