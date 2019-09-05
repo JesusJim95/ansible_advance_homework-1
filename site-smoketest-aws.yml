@@ -1,12 +1,13 @@
 - hosts: tag_AnsibleGroup_frontends
   gather_facts: false
   tasks:
-  
+
   - name: Curl website
     uri:
       url: "http://{{ inventory_hostname }}"
       return_content: yes
     register: webpage
+    delegate_to: localhost
 
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
